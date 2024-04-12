@@ -15,12 +15,12 @@ async function onSubmit() {
       phone.value,
       email.value
   )
-  const botToken = '7075975505:AAFyFlsJwk095tDKq6oVaxDhpOz7fTwT_Qknpm install -g sass';
-  const chatId = '-4126829006'
+  const botToken = '7075975505:AAFyFlsJwk095tDKq6oVaxDhpOz7fTwT_Qk';
+  const chatId = '-1002039628852'
   const text = 'Новое сообщение:%0A%0A' +
       `Вопрос:%0A ${question.value}` +
       `Имя:%0A ${name.value}` +
-      `Телефон:%0A ${phone.value}` +
+      `Телефон: ${phone.value}` +
       `Эл. почта: ${email.value}`;
   await fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${text}`)
       .then((response) => {
